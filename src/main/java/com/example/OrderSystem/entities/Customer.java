@@ -2,16 +2,19 @@ package com.example.OrderSystem.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
+
+
 
 
 @Data
 @Entity
 @Table(name = "Customers")
 public class Customer {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
+    Long id;
 
     @Column(name = "name", length = 80, nullable = false)
     private String fullName;
