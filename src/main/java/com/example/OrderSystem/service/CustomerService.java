@@ -25,10 +25,14 @@ public class CustomerService {
         return customerRepository.findByEmail(email).orElseThrow( () -> new RuntimeException("No se encontro ningun cliente con este email: " + email));
     }
 
-
     public Customer guardarCustomer(Customer customer) {
         return customerRepository.save(customer);
     }
+
+    public boolean existeClientePorEmail (String email) {
+        return  customerRepository.existByEmail(email);
+    }
+
 
 
 }
