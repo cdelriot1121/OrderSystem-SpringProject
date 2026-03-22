@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class PublicPagesController {
 
 
-    
+    //Mapear pagina principal 
     @GetMapping("/")
     public String index(){
         return "index";
